@@ -1,6 +1,5 @@
 <img width="910" height="1077" alt="image" src="https://github.com/user-attachments/assets/4869e961-51e7-4008-a2fd-bee0ff59efbd" />
 
-
 # VNext with Pydantic
 
 This app sets up a direct connection between Pydantic AI and CopilotKit vNext to create a playground for chatting with an AI agent.
@@ -75,13 +74,13 @@ Open [http://localhost:3000](http://localhost:3000) and start chatting. The dev 
 
 - **Tool Calls**: The agent has a `get_weather` tool. When you ask about weather, you'll see the tool being called in the UI.
 - **Real-time Streaming**: Responses stream in as they're generated.
-- **Tool Visualization**: The `WildCardRender` component shows you exactly what tools are being called with what arguments and results.
+- **Tool Visualization**: The `WildCardToolCallRender` component shows you exactly what tools are being called with what arguments and results.
 
-## How the frontend is set up
+## How the frontend is set up (see [`frontend/app/page.tsx`](frontend/app/page.tsx))
 
 1. Import `PydanticAIAgent` from `@ag-ui/pydantic-ai`
 2. Creates the outer `CopilotKitProvider` component and configures the `default` agent to use the Pydantic AI agent.
-3. Adds the `WildCardRender` component to the `renderToolCalls` to surface tool calls in the UI.
+3. Adds the `WildCardToolCallRender` component to the `renderToolCalls` to surface tool calls in the UI.
 4. Adds the `CopilotChat` component inside a full-screen div.
 
 ## Files That Matter
@@ -89,10 +88,9 @@ Open [http://localhost:3000](http://localhost:3000) and start chatting. The dev 
 - `agent.py` - The Pydantic AI agent definition.
 - `server.py` - Starlette app that serves `/api` and the static frontend.
 - `frontend/app/page.tsx` - Sets up CopilotKit and connects to the backend.
-- `frontend/app/WildCardRender.tsx` - Shows tool calls in a nice UI.
 
 ## Want to Modify?
 
 - Add more tools: Just add more `@agent.tool` decorated functions in `agent.py`
-- Add custom tool renderers: Define them with `defineToolCallRender` and add to the `renderToolCalls` prop in `app/page.tsx`
+- Add custom tool renderers: Define them with `defineToolCallRender` and add to the `renderToolCalls` prop in `frontend/app/page.tsx`
 - Customize the UI ...

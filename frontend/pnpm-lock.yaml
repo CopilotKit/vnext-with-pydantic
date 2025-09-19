@@ -15,8 +15,8 @@ importers:
         specifier: ^0.0.1
         version: 0.0.1(@ag-ui/client@0.0.38-alpha.2)(@ag-ui/core@0.0.38-alpha.2)(rxjs@7.8.1)
       '@copilotkitnext/react':
-        specifier: 0.0.9-alpha.2
-        version: 0.0.9-alpha.2(@types/react-dom@19.1.9(@types/react@19.1.13))(@types/react@19.1.13)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
+        specifier: 0.0.9-alpha.3
+        version: 0.0.9-alpha.3(@types/react-dom@19.1.9(@types/react@19.1.13))(@types/react@19.1.13)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
       next:
         specifier: 15.5.3
         version: 15.5.3(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
@@ -86,19 +86,19 @@ packages:
   '@bufbuild/protobuf@2.9.0':
     resolution: {integrity: sha512-rnJenoStJ8nvmt9Gzye8nkYd6V22xUAnu4086ER7h1zJ508vStko4pMvDeQ446ilDTFpV5wnoc5YS7XvMwwMqA==}
 
-  '@copilotkitnext/core@0.0.9-alpha.2':
-    resolution: {integrity: sha512-e4NpgyT4a68YI4LyeVRdtebWHdKxiHD5/d8PqsWHrNHc3gAqZxX/NoWh4yEe1ssvyJwmwS+cXq8KHNKwfjmiOw==}
+  '@copilotkitnext/core@0.0.9-alpha.3':
+    resolution: {integrity: sha512-VYhzQVdr8TuU9CBCVkjTdxcYDtV1kjBBkgcWdnvklm7oMxFOuIl+Cc9HPP7kXYsPcuW3WiUEYy+MnvBog82lcg==}
     engines: {node: '>=18'}
 
-  '@copilotkitnext/react@0.0.9-alpha.2':
-    resolution: {integrity: sha512-NQovz/xOM8ny0+u4nTOrgqMLWVyE4+uOl9tj6yW+ooEfdNY07y3WNcubo0F22sV3PI0MreagaCELUGwQlhQO1w==}
+  '@copilotkitnext/react@0.0.9-alpha.3':
+    resolution: {integrity: sha512-mGxRy7XXQsTAGzTEY9TLxcil19q1P3/LBmRYW3VgJ7trEhSAJvcyG/hC0J8pAQZbUkZ5qjABEfhIBu/EONvtDg==}
     engines: {node: '>=18'}
     peerDependencies:
       react: '>=16.8.0'
       react-dom: '>=16.8.0'
 
-  '@copilotkitnext/shared@0.0.9-alpha.2':
-    resolution: {integrity: sha512-nwd/DAHE9ivVLBWNkh0PGRjHr3WMUvnoEzTubrTpmggO2sNqkMG4sBaTfuAPuzX9BIM8NlsB67LRA8GmjMJWpw==}
+  '@copilotkitnext/shared@0.0.9-alpha.3':
+    resolution: {integrity: sha512-HHC51jMFBxXRzIrVjSJdDqC971UX/PhRs7PCd/UK/jbU0VMieD9dhXU9TxPtd6gtf1gZhb6AJC8DHGwRk+FopA==}
     engines: {node: '>=18'}
 
   '@emnapi/core@1.5.0':
@@ -2722,20 +2722,20 @@ snapshots:
 
   '@bufbuild/protobuf@2.9.0': {}
 
-  '@copilotkitnext/core@0.0.9-alpha.2':
+  '@copilotkitnext/core@0.0.9-alpha.3':
     dependencies:
       '@ag-ui/client': 0.0.38-alpha.2
-      '@copilotkitnext/shared': 0.0.9-alpha.2
+      '@copilotkitnext/shared': 0.0.9-alpha.3
       rxjs: 7.8.1
       zod: 3.25.76
       zod-to-json-schema: 3.24.6(zod@3.25.76)
 
-  '@copilotkitnext/react@0.0.9-alpha.2(@types/react-dom@19.1.9(@types/react@19.1.13))(@types/react@19.1.13)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)':
+  '@copilotkitnext/react@0.0.9-alpha.3(@types/react-dom@19.1.9(@types/react@19.1.13))(@types/react@19.1.13)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)':
     dependencies:
       '@ag-ui/client': 0.0.38-alpha.2
       '@ag-ui/core': 0.0.38-alpha.2
-      '@copilotkitnext/core': 0.0.9-alpha.2
-      '@copilotkitnext/shared': 0.0.9-alpha.2
+      '@copilotkitnext/core': 0.0.9-alpha.3
+      '@copilotkitnext/shared': 0.0.9-alpha.3
       '@radix-ui/react-dropdown-menu': 2.1.16(@types/react-dom@19.1.9(@types/react@19.1.13))(@types/react@19.1.13)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
       '@radix-ui/react-slot': 1.2.3(@types/react@19.1.13)(react@19.1.0)
       '@radix-ui/react-tooltip': 1.2.8(@types/react-dom@19.1.9(@types/react@19.1.13))(@types/react@19.1.13)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
@@ -2761,7 +2761,7 @@ snapshots:
       - '@types/react-dom'
       - supports-color
 
-  '@copilotkitnext/shared@0.0.9-alpha.2':
+  '@copilotkitnext/shared@0.0.9-alpha.3':
     dependencies:
       partial-json: 0.1.7
       uuid: 11.1.0

@@ -12,7 +12,7 @@
   "dependencies": {
     "@ag-ui/client": "0.0.38-alpha.2",
     "@ag-ui/pydantic-ai": "^0.0.1",
-    "@copilotkitnext/react": "0.0.9-alpha.2",
+    "@copilotkitnext/react": "0.0.9-alpha.3",
     "next": "15.5.3",
     "react": "19.1.0",
     "react-dom": "19.1.0",
