@@ -1,10 +1,8 @@
 # VNext with Pydantic
 
-A simple demo showing how Pydantic AI agents work with CopilotKit's new frontend.
-
 ## What's This?
 
-This is an example of Pydantic AI and CopilotKit vNext working together.
+This is an example of Pydantic AI and CopilotKit vNext working together with a direct connection.
 
 CopilotKit connects directly to the endpoint created by the Pydantic AI agent. The React frontend then displays the chat and
 shows streaming updates of what the agent is doing in real-time.
@@ -33,8 +31,6 @@ pnpm install
 pnpm run build:static
 cd ..
 ```
-
-> The static export fetches Google Fonts. Make sure the machine running the build can reach `fonts.googleapis.com`, or configure local fonts before building.
 
 ### 2. Start the Python server
 
@@ -79,7 +75,6 @@ Open [http://localhost:3000](http://localhost:3000) and start chatting. The dev 
 - **Tool Calls**: The agent has a `get_weather` tool. When you ask about weather, you'll see the tool being called in the UI.
 - **Real-time Streaming**: Responses stream in as they're generated.
 - **Tool Visualization**: The `WildCardRender` component shows you exactly what tools are being called with what arguments and results.
-
 
 ## How the frontend is set up
 
