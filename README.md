@@ -1,8 +1,6 @@
 # VNext with Pydantic
 
-## What's This?
-
-This is an example of Pydantic AI and CopilotKit vNext working together with a direct connection.
+This app sets up a direct connection between Pydantic AI and CopilotKit vNext to create a playground for chatting with an AI agent.
 
 CopilotKit connects directly to the endpoint created by the Pydantic AI agent. The React frontend then displays the chat and
 shows streaming updates of what the agent is doing in real-time.
