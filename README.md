@@ -28,6 +28,10 @@ shows streaming updates of what the agent is doing in real-time.
 ```bash
 cd agent
 
+cat > .env << EOF
+OPENAI_API_KEY=your-openai-api-key
+EOF
+
 # Create a virtual environment
 uv venv
 
