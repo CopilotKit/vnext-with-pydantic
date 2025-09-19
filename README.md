@@ -10,7 +10,7 @@ shows streaming updates of what the agent is doing in real-time.
 
 ## How It Works
 
-1. **Backend (Python)**: Creates a Pydantic AI agent and sets up an endpoint using `agent.to_ag_ui()`.
+1. **Backend (Python)**: Creates a Pydantic AI agent and sets up an endpoint using `handle_ag_ui_request()`.
 
 2. **Frontend (React)**: Uses CopilotKit's chat component to communicate directly with the Pydantic AI agent.
 
