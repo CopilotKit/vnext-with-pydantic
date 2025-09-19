@@ -28,6 +28,9 @@ shows streaming updates of what the agent is doing in real-time.
 ```bash
 cd agent
 
+# Create a virtual environment
+uv venv
+
 # Install stuff
 uv pip install -r requirements.txt
 
