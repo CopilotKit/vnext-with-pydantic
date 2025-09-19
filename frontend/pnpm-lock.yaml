@@ -11,6 +11,9 @@ importers:
       '@ag-ui/client':
         specifier: 0.0.38-alpha.2
         version: 0.0.38-alpha.2
+      '@ag-ui/pydantic-ai':
+        specifier: ^0.0.1
+        version: 0.0.1(@ag-ui/client@0.0.38-alpha.2)(@ag-ui/core@0.0.38-alpha.2)(rxjs@7.8.1)
       '@copilotkitnext/react':
         specifier: 0.0.9-alpha.2
         version: 0.0.9-alpha.2(@types/react-dom@19.1.9(@types/react@19.1.13))(@types/react@19.1.13)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
@@ -68,6 +71,13 @@ packages:
 
   '@ag-ui/proto@0.0.38-alpha.2':
     resolution: {integrity: sha512-ND6hB8u3AbkrooAm4m7yd3FknvrUo/0IWw8U6vqb9IiriIzhg2ax4dsUFQkHLuU7kWdESyoTSSNbfpAF4g/TnA==}
+
+  '@ag-ui/pydantic-ai@0.0.1':
+    resolution: {integrity: sha512-1KS8jmYqMpDrATLpuKfc+LN6rfnu6ecPAmiNPxdTKn6g5+Z9pE6vPflcvCVpKW6tH4GOhRATrNIU179D28UB1Q==}
+    peerDependencies:
+      '@ag-ui/client': '>=0.0.37'
+      '@ag-ui/core': '>=0.0.37'
+      rxjs: 7.8.1
 
   '@alloc/quick-lru@5.2.0':
     resolution: {integrity: sha512-UrcABB+4bUrFABwbluTIBErXwvbsU/V7TZWfmbgJfbkwiBuziS9gxdODUyuiecfdGQ85jglMW6juS3+z5TsKLw==}
@@ -2701,6 +2711,12 @@ snapshots:
       '@ag-ui/core': 0.0.38-alpha.2
       '@bufbuild/protobuf': 2.9.0
       '@protobuf-ts/protoc': 2.11.1
+
+  '@ag-ui/pydantic-ai@0.0.1(@ag-ui/client@0.0.38-alpha.2)(@ag-ui/core@0.0.38-alpha.2)(rxjs@7.8.1)':
+    dependencies:
+      '@ag-ui/client': 0.0.38-alpha.2
+      '@ag-ui/core': 0.0.38-alpha.2
+      rxjs: 7.8.1
 
   '@alloc/quick-lru@5.2.0': {}
 

@@ -1,14 +1,14 @@
 "use client";
 
 import { CopilotChat, CopilotKitProvider } from "@copilotkitnext/react";
-import { HttpAgent } from "@ag-ui/client";
+import { PydanticAIAgent } from "@ag-ui/pydantic-ai";
 import { WildCardRender } from "./WildCardRender";
 
 export default function Home() {
   return (
     <CopilotKitProvider
       agents={{
-        default: new HttpAgent({
+        default: new PydanticAIAgent({
           url: "http://localhost:8000",
         }),
       }}
