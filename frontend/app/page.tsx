@@ -5,11 +5,14 @@ import { PydanticAIAgent } from "@ag-ui/pydantic-ai";
 import { WildCardRender } from "./WildCardRender";
 
 export default function Home() {
+  const agentUrl =
+    typeof window === "undefined" ? "/api" : `${window.location.origin}/api`;
+
   return (
     <CopilotKitProvider
       agents={{
         default: new PydanticAIAgent({
-          url: "http://localhost:8000",
+          url: agentUrl,
         }),
       }}
       renderToolCalls={[WildCardRender]}
