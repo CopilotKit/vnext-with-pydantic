@@ -4,9 +4,10 @@ A simple demo showing how Pydantic AI agents work with CopilotKit's new frontend
 
 ## What's This?
 
-This is a minimal example of Pydantic AI and CopilotKit vnext working together.
+This is an example of Pydantic AI and CopilotKit vNext working together.
 
-The Python backend uses Pydantic AI to create an agent that can handle tools and respond to messages. The React frontend uses CopilotKit to display the chat and show what the agent is doing in real-time.
+CopilotKit connects directly to the endpoint created by the Pydantic AI agent. The React frontend then displays the chat and
+shows streaming updates of what the agent is doing in real-time.
 
 ## How It Works
 
@@ -51,6 +52,13 @@ Open [http://localhost:3000](http://localhost:3000) and start chatting.
 - **Tool Calls**: The agent has a `get_weather` tool. When you ask about weather, you'll see the tool being called in the UI.
 - **Real-time Streaming**: Responses stream in as they're generated.
 - **Tool Visualization**: The `WildCardRender` component shows you exactly what tools are being called with what arguments and results.
+
+## How the frontend is set up
+
+1. Import `PydanticAIAgent` from `@ag-ui/pydantic-ai`
+2. Creates the outer `CopilotKitProvider` component and configures the `default` agent to use the Pydantic AI agent.
+3. Adds the `WildCardRender` component to the `renderToolCalls` to surface tool calls in the UI.
+4. Adds the `CopilotChat` component inside a full-screen div.
 
 ## Files That Matter
 
