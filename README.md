@@ -70,7 +70,7 @@ pnpm install
 pnpm dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) and start chatting. The dev server proxies API calls to the Python backend and reflects code changes immediately.
+Open [http://localhost:3000](http://localhost:3000) and start chatting. The dev server reflects code changes immediately.
 
 - **Tool Calls**: The agent has a `get_weather` tool. When you ask about weather, you'll see the tool being called in the UI.
 - **Real-time Streaming**: Responses stream in as they're generated.
