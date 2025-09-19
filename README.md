@@ -21,44 +21,65 @@ shows streaming updates of what the agent is doing in real-time.
 - [pnpm](https://pnpm.io/) for Node.js package management
 - An OpenAI API key in your `.env` file or elsewhere in your environment
 
-## Running It
+## Production Setup
 
-### Terminal 1: Start the Python Backend
+Build the React app once and let Python serve both the static bundle and the agent on port 8000.
 
-```bash
-cd agent
-
-cat > .env << EOF
-OPENAI_API_KEY=your-openai-api-key
-EOF
-
-# Create a virtual environment
-uv venv
-
-# Install stuff
-uv pip install -r requirements.txt
-
-# Run the server (will be on port 8000)
-uv run python agent.py
-```
-
-### Terminal 2: Start the React Frontend
+### 1. Build the frontend bundle
 
 ```bash
 cd frontend
-
-# Install stuff
 pnpm install
+pnpm run build:static
+cd ..
+```
 
-# Run the dev server (will be on port 3000)
+> The static export fetches Google Fonts. Make sure the machine running the build can reach `fonts.googleapis.com`, or configure local fonts before building.
+
+### 2. Start the Python server
+
+```bash
+cat > .env <<'EOF'
+OPENAI_API_KEY=your-openai-api-key
+EOF
+
+uv venv
+uv pip install -r requirements.txt
+uv run python server.py
+```
+
+Visit [http://localhost:8000](http://localhost:8000). The static frontend is served from `/`, and `/api` streams agent responses.
+
+## Development Setup (Live Reload)
+
+Run the backend and frontend separately to get hot reloads during development.
+
+### Terminal 1: Python backend (port 8000)
+
+```bash
+cat > .env <<'EOF'
+OPENAI_API_KEY=your-openai-api-key
+EOF
+
+uv venv
+uv pip install -r requirements.txt
+uv run python server.py
+```
+
+### Terminal 2: React frontend (port 3000)
+
+```bash
+cd frontend
+pnpm install
 pnpm dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) and start chatting.
+Open [http://localhost:3000](http://localhost:3000) and start chatting. The dev server proxies API calls to the Python backend and reflects code changes immediately.
 
 - **Tool Calls**: The agent has a `get_weather` tool. When you ask about weather, you'll see the tool being called in the UI.
 - **Real-time Streaming**: Responses stream in as they're generated.
 - **Tool Visualization**: The `WildCardRender` component shows you exactly what tools are being called with what arguments and results.
+
 
 ## How the frontend is set up
 
@@ -69,7 +90,8 @@ Open [http://localhost:3000](http://localhost:3000) and start chatting.
 
 ## Files That Matter
 
-- `agent/agent.py` - The Pydantic AI agent.
+- `agent.py` - The Pydantic AI agent definition.
+- `server.py` - Starlette app that serves `/api` and the static frontend.
 - `frontend/app/page.tsx` - Sets up CopilotKit and connects to the backend.
 - `frontend/app/WildCardRender.tsx` - Shows tool calls in a nice UI.
 
