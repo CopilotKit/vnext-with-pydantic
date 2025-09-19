@@ -1,3 +1,6 @@
+<img width="910" height="1077" alt="image" src="https://github.com/user-attachments/assets/4869e961-51e7-4008-a2fd-bee0ff59efbd" />
+
+
 # VNext with Pydantic
 
 This app sets up a direct connection between Pydantic AI and CopilotKit vNext to create a playground for chatting with an AI agent.
